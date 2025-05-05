@@ -1,0 +1,22 @@
+{
+  "name": "dockerized-web-app",
+  "version": "1.0.0",
+  "description": "a simple todo app ",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jest": "^29.7.0",
+    "mongoose": "^8.14.1",
+    "supertest": "^7.1.0"
+  }
+}

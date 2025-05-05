@@ -1,0 +1,33 @@
+name: todo-app
+
+services:
+  app:
+    image: todo-app:lts
+    ports: 
+      - 3000:3000
+    environment:
+      - MONGO_HOST=mongodb
+      - MONGO_DB=tasks
+      - MONGO_USER=admin
+      - MONGO_PASS=admin
+    networks:
+      - app-network
+
+  mongodb:
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=tasks
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+volumes:
+  mongo-data:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge
