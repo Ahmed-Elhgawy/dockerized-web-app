@@ -2,14 +2,14 @@ name: todo-app
 
 services:
   app:
-    image: todo-app:lts
+    image: $IMAGE_NAME
     ports: 
       - 3000:3000
     environment:
       - MONGO_HOST=mongodb
-      - MONGO_DB=tasks
-      - MONGO_USER=admin
-      - MONGO_PASS=admin
+      - MONGO_DB=$MONGO_DB
+      - MONGO_USER=$MONGO_USER
+      - MONGO_PASS=$MONGO_PASS
     networks:
       - app-network
 
