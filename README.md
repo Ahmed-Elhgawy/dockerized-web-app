@@ -7,6 +7,28 @@ This app is fully containerized using **Docker**, and includes testing with **Je
 
 ---
 
+## 📁 Project Structure
+
+```bash
+.
+├── app.js               # The main file
+├── db.js
+├── models
+│   └── Task.js
+├── public
+│   └── index.html
+├── tests
+│   └── app.test.js
+├── Dockerfile
+├── .dockerignore
+├── docker-compose.yml
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
 ## 🚀 Features
 
 - Add new tasks
@@ -89,4 +111,5 @@ npm test
 ---
 
 ## 🙌 Author
+
 Ahmed Elhgawy – [GitHub](https://github.com/Ahmed-Elhgawy) | [LinkedIn](https://linkedin.com/in/ahmed-mahmoud-a16310268)
