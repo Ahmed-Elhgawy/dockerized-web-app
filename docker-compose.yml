@@ -2,23 +2,23 @@ name: todo-app
 
 services:
   app:
-    image: $IMAGE_NAME
+    image: ${IMAGE_NAME}
     ports: 
       - 3000:3000
     environment:
       - MONGO_HOST=mongodb
-      - MONGO_DB=$MONGO_DB
-      - MONGO_USER=$MONGO_USER
-      - MONGO_PASS=$MONGO_PASS
+      - MONGO_DB=${MONGO_DB}
+      - MONGO_USER=${MONGO_USER}
+      - MONGO_PASS=${MONGO_PASS}
     networks:
       - app-network
 
   mongodb:
     image: mongo:latest
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=$MONGO_USER
-      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_PASS
-      - MONGO_INITDB_DATABASE=$MONGO_DB
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASS}
+      - MONGO_INITDB_DATABASE=${MONGO_DB}
     volumes:
       - mongo-data:/data/db
     networks:
