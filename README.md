@@ -42,6 +42,10 @@ docker build -t todo-app:lts .
 ```
 ### 3. Run The Application Using Docker Compose
 ```bash
+export IMAGE_NAME=todo-app:lts
+export MONGO_USER=admin
+export MONGO_PASS=admin_password
+export MONGO_DB=app_db
 docker compose up -d
 ```
 
